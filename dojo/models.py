@@ -2120,7 +2120,8 @@ class Benchmark_Type(models.Model):
     version = models.CharField(max_length=15)
     source = (('PCI', 'PCI'),
               ('OWASP ASVS', 'OWASP ASVS'),
-              ('OWASP Mobile ASVS', 'OWASP Mobile ASVS'), ('Custom BenchMark', 'Custom Benchmark')
+              ('OWASP Mobile ASVS', 'OWASP Mobile ASVS'), 
+              ('Custom BenchMark', 'Custom Benchmark'))
     benchmark_source = models.CharField(max_length=20, blank=False,
                                         null=True, choices=source,
                                         default='OWASP ASVS')
