@@ -2120,7 +2120,7 @@ class Benchmark_Type(models.Model):
     version = models.CharField(max_length=15)
     source = (('PCI', 'PCI'),
               ('OWASP ASVS', 'OWASP ASVS'),
-              ('OWASP Mobile ASVS', 'OWASP Mobile ASVS'))
+              ('OWASP Mobile ASVS', 'OWASP Mobile ASVS'), ('Custom BenchMark', 'Custom Benchmark')
     benchmark_source = models.CharField(max_length=20, blank=False,
                                         null=True, choices=source,
                                         default='OWASP ASVS')
@@ -2360,7 +2360,7 @@ admin.site.register(ScanSettings)
 admin.site.register(IPScan)
 admin.site.register(Alerts)
 admin.site.register(JIRA_Issue)
-admin.site.register(JIRA_Conf)
+#admin.site.register(JIRA_Conf)
 admin.site.register(JIRA_PKey)
 admin.site.register(Tool_Configuration)
 admin.site.register(Tool_Product_Settings)
